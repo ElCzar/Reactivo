@@ -1,6 +1,7 @@
 package com.taller.reactivo.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,11 +21,11 @@ import lombok.Setter;
 @Table(name = "curso")
 public class Curso implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @org.springframework.data.annotation.Id
     private Integer materia_id;
     private Integer profesor_id;
     private String numero;
     private Integer estudiante_id;
-    private String fecha_inicio;
-    private String fecha_fin;
+    private LocalDate fecha_inicio;
+    private LocalDate fecha_fin;
 }

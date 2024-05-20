@@ -21,9 +21,9 @@ import java.io.Serializable;
 public class Estudiante implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @org.springframework.data.annotation.Id
     private Integer id;
     private String nombre;
     private String apellido;
     private String correo;
-    private char rol;
 }

@@ -45,7 +45,6 @@ public class ControladorEstudiante {
                     estudianteEncontrado.setNombre(estudiante.getNombre());
                     estudianteEncontrado.setApellido(estudiante.getApellido());
                     estudianteEncontrado.setCorreo(estudiante.getCorreo());
-                    estudianteEncontrado.setRol(estudiante.getRol());
                     return repositorioEstudiante.save(estudianteEncontrado);
                 })
                 .map(estudianteActualizado -> new ResponseEntity<>(estudianteActualizado, HttpStatus.OK))
